@@ -38,10 +38,8 @@ export default defineNuxtConfig({
       routes: ['/'],
       ignore: ['/hi'],
     },
-    nitro: {
-      routeRules: {
-        "/api/**": { proxy: "https://www.fruityvice.com/api/**" }
-      }
+    routeRules: {
+      '/api/**': { proxy: 'https://www.fruityvice.com/api/**' },
     },
   },
 

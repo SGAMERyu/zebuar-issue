@@ -5,13 +5,16 @@ useHead({
   title: appName,
 })
 
-useAsyncData('test', () => {
+const { refresh } = useAsyncData('test', () => {
   return $fetch('/api/fruit/all', {
   })
 })
 </script>
 
 <template>
+  <button @click="refresh()">
+    页面请求
+  </button>>
   <VitePwaManifest />
   <NuxtLayout>
     <NuxtPage />
