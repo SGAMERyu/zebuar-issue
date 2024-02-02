@@ -4,6 +4,11 @@ import { appName } from '~/constants'
 useHead({
   title: appName,
 })
+
+useAsyncData('test', () => {
+  return $fetch('/api/fruit/all', {
+  })
+})
 </script>
 
 <template>
